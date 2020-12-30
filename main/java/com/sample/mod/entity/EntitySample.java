@@ -64,7 +64,6 @@ public class EntitySample extends EntityAnimal {
         if(!this.getEntityWorld().isAnyPlayerWithinRangeAt(posX, posY, posZ, 5D))
             this.motionY *= 0.6000000238418579D;
 
-        //コウモリの動きとは関係ない
         if(rand.nextInt(10000)<1) {
             if(!world.isRemote)
                 this.dropItem(Items.BEEF, 4);
