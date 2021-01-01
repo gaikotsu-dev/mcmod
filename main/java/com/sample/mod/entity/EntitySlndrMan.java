@@ -41,12 +41,12 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.function.Predicate;
 
-public class EntityCat extends EntityMob {
+public class EntitySlndrMan extends EntityMob {
 
     private BlockPos spawnPosition;
     int counter=0;
 
-    public EntityCat(World worldIn)
+    public EntitySlndrMan(World worldIn)
     {
         super(worldIn);
         super.setSize(1.0F, 1.0F);
@@ -71,7 +71,7 @@ public class EntityCat extends EntityMob {
     {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(35.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.5D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.1D);
         //this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3.0D);
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0D);
@@ -90,8 +90,8 @@ public class EntityCat extends EntityMob {
         super.onUpdate();
     }
     
-    public static void registerFixesCat(DataFixer fixer)
+    public static void registerFixesSlndrMan(DataFixer fixer)
     {
-        EntityLiving.registerFixesMob(fixer, EntityCat.class);
+        EntityLiving.registerFixesMob(fixer, EntitySlndrMan.class);
     }
 }

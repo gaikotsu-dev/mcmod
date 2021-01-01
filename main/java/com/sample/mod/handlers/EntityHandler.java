@@ -32,11 +32,18 @@ public class EntityHandler {
                     return new RenderCstmMan2(manager, new ModelCstmMan2(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntitySlndrMan.class, new IRenderFactory<EntitySlndrMan>(){
+                @Override
+                public Render<? super EntitySlndrMan> createRenderFor(RenderManager manager){
+                    return new RenderSlndrMan(manager, new ModelSlndrMan(), 0.3f);
+                }
+            });
         }
     }
     public static void registerModEntity() {
         EntityRegistry.registerModEntity(new ResourceLocation("sample"), EntitySample.class, "Sample", 0, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.registerModEntity(new ResourceLocation("cat"), EntityCat.class, "Cartoon Cat", 1, Reference.MODID, 50, 1, true, 1001, 23);
         EntityRegistry.registerModEntity(new ResourceLocation("cstmman"), EntityCstmMan2.class, "Costume Man2", 2, Reference.MODID, 50, 1, true, 1002, 24);
+        EntityRegistry.registerModEntity(new ResourceLocation("slndrman"), EntitySlndrMan.class, "Slender Man", 3, Reference.MODID, 50, 1, true, 1003, 25);
     }
 }
