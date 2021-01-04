@@ -4,11 +4,18 @@ import com.sample.mod.Reference;
 import com.sample.mod.entity.*;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.EntityList.EntityEggInfo;
+import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class EntityHandler {
     public static void registerEntityRenderingHandler(FMLPreInitializationEvent event)
@@ -38,12 +45,25 @@ public class EntityHandler {
                     return new RenderSlndrMan(manager, new ModelSlndrMan(), 0.3f);
                 }
             });
+
+            RenderingRegistry.registerEntityRenderingHandler(EntityIronMan.class, new IRenderFactory<EntityIronMan>(){
+                @Override
+                public Render<? super EntityIronMan> createRenderFor(RenderManager manager){
+                    return new RenderIronMan(manager, new ModelIronMan(), 0.3f);
+                }
+            });
         }
     }
     public static void registerModEntity() {
         EntityRegistry.registerModEntity(new ResourceLocation("sample"), EntitySample.class, "Sample", 0, Reference.MODID, 50, 1, true, 1000, 22);
-        EntityRegistry.registerModEntity(new ResourceLocation("cat"), EntityCat.class, "Cartoon Cat", 1, Reference.MODID, 50, 1, true, 1001, 23);
-        EntityRegistry.registerModEntity(new ResourceLocation("cstmman"), EntityCstmMan2.class, "Costume Man2", 2, Reference.MODID, 50, 1, true, 1002, 24);
-        EntityRegistry.registerModEntity(new ResourceLocation("slndrman"), EntitySlndrMan.class, "Slender Man", 3, Reference.MODID, 50, 1, true, 1003, 25);
+        EntityRegistry.addSpawn(EntitySample.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("cartooncat"), EntityCat.class, "Cartoon Cat", 1, Reference.MODID, 50, 1, true, 1001, 23);
+        EntityRegistry.addSpawn(EntityCat.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("costumeman"), EntityCstmMan2.class, "Costume Man2", 2, Reference.MODID, 50, 1, true, 1002, 24);
+        EntityRegistry.addSpawn(EntityCstmMan2.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("slenderman"), EntitySlndrMan.class, "Slender Man", 3, Reference.MODID, 50, 1, true, 1003, 25);
+        EntityRegistry.addSpawn(EntitySlndrMan.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+
+        EntityRegistry.registerModEntity(new ResourceLocation("ironman"), EntityIronMan.class, "Iron Man", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
 }
