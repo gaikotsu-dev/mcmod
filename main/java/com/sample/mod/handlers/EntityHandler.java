@@ -45,6 +45,12 @@ public class EntityHandler {
                     return new RenderSlndrMan(manager, new ModelSlndrMan(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntitySirenHead.class, new IRenderFactory<EntitySirenHead>(){
+                @Override
+                public Render<? super EntitySirenHead> createRenderFor(RenderManager manager){
+                    return new RenderSirenHead(manager, new ModelSirenHead(), 0.3f);
+                }
+            });
 
             RenderingRegistry.registerEntityRenderingHandler(EntityIronMan.class, new IRenderFactory<EntityIronMan>(){
                 @Override
@@ -63,6 +69,8 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntityCstmMan2.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("slenderman"), EntitySlndrMan.class, "Slender Man", 3, Reference.MODID, 50, 1, true, 1003, 25);
         EntityRegistry.addSpawn(EntitySlndrMan.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sirenhead"), EntitySirenHead.class, "Siren Head", 4, Reference.MODID, 50, 1, true, 1004, 26);
+        EntityRegistry.addSpawn(EntitySirenHead.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("ironman"), EntityIronMan.class, "Iron Man", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
