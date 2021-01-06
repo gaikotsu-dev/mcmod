@@ -32,11 +32,11 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class EntitySirenHead extends EntityHusk {
+public class EntitySirenHead2 extends EntityHusk {
 
     private BlockPos spawnPosition;
 
-    public EntitySirenHead(World worldIn)
+    public EntitySirenHead2(World worldIn)
     {
         super(worldIn);
         super.setSize(1.0F, 1.0F);
