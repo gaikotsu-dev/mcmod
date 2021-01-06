@@ -61,17 +61,17 @@ public class EntityHandler {
         }
     }
     public static void registerModEntity() {
-        EntityRegistry.registerModEntity(new ResourceLocation("sample"), EntitySample.class, "Sample", 0, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:sample"), EntitySample.class, "Sample", 0, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntitySample.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("cartooncat"), EntityCat.class, "Cartoon Cat", 1, Reference.MODID, 50, 1, true, 1001, 23);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:cartooncat"), EntityCat.class, "Cat", 1, Reference.MODID, 50, 1, true, 1001, 23);
         EntityRegistry.addSpawn(EntityCat.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("costumeman"), EntityCstmMan2.class, "Costume Man2", 2, Reference.MODID, 50, 1, true, 1002, 24);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:costumeman"), EntityCstmMan2.class, "CstmMan2", 2, Reference.MODID, 50, 1, true, 1002, 24);
         EntityRegistry.addSpawn(EntityCstmMan2.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("slenderman"), EntitySlndrMan.class, "Slender Man", 3, Reference.MODID, 50, 1, true, 1003, 25);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:slenderman"), EntitySlndrMan.class, "SlndrMan", 3, Reference.MODID, 50, 1, true, 1003, 25);
         EntityRegistry.addSpawn(EntitySlndrMan.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sirenhead"), EntitySirenHead.class, "Siren Head", 4, Reference.MODID, 50, 1, true, 1004, 26);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:sirenhead"), EntitySirenHead.class, "SirenHead", 4, Reference.MODID, 50, 1, true, 1004, 26);
         EntityRegistry.addSpawn(EntitySirenHead.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
-        EntityRegistry.registerModEntity(new ResourceLocation("ironman"), EntityIronMan.class, "Iron Man", 100, Reference.MODID, 50, 1, true, 100000, 1000);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
 }

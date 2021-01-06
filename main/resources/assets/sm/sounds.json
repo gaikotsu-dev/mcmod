@@ -1,0 +1,9 @@
+﻿    {
+    	"siren": {
+    		"category": "player",
+    		"sounds": [{
+    			"name": "sm:siren",
+    			"stream": true
+    		}]
+    	}
+    }
