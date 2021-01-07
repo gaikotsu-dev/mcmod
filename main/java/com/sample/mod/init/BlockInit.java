@@ -15,12 +15,12 @@ public class BlockInit {
 
     public static void init() {
         sample_ore = new CustomOre("sample_ore", 2.0F, 4.0F, 2);
-        //sample_ore2 = new CustomOre("sample_ore2", 2.0F, 4.0F, 2);
+        sample_ore2 = new CustomOre("sample_ore2", 2.0F, 4.0F, 2);
     }
 
     public static void register() {
         registerBlock(sample_ore);
-        //registerBlock(sample_ore2);
+        registerBlock(sample_ore2);
     }
 
     public static void registerBlock(Block block) {
@@ -33,7 +33,7 @@ public class BlockInit {
 
     public static void registerRenders() {
         registerRender(sample_ore);
-        //registerRender(sample_ore2);
+        registerRender(sample_ore2);
     }
 
     public static void registerRender(Block block) {

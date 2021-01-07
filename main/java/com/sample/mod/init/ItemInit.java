@@ -20,7 +20,6 @@ public class ItemInit {
 
     public static void registerItem(Item item) {
         ForgeRegistries.ITEMS.register(item);
-//      Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
 }

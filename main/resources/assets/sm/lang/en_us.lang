@@ -1,2 +1,8 @@
-item.sample_ingot.name=Sample Ingot
+﻿item.sample_ingot.name=Sample Ingot
 tile.sample_ore.name=Sample Ore
+entity.CtnCat.name=Cartoon Cat
+entity.CstmMan2.name=Costume Man
+entity.SlndrMan.name=Slender Man
+entity.SirenHead.name=Siren Head
+entity.SirenHead2.name=Siren Head2
+entity.IronMan.name=Iron Man

@@ -41,12 +41,12 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.function.Predicate;
 
-public class EntityCat extends EntityMob {
+public class EntityCtnCat extends EntityMob {
 
     private BlockPos spawnPosition;
     int counter=0;
 
-    public EntityCat(World worldIn)
+    public EntityCtnCat(World worldIn)
     {
         super(worldIn);
         super.setSize(1.0F, 1.0F);
@@ -90,8 +90,8 @@ public class EntityCat extends EntityMob {
         super.onUpdate();
     }
     
-    public static void registerFixesCat(DataFixer fixer)
+    public static void registerFixesCtnCat(DataFixer fixer)
     {
-        EntityLiving.registerFixesMob(fixer, EntityCat.class);
+        EntityLiving.registerFixesMob(fixer, EntityCtnCat.class);
     }
 }

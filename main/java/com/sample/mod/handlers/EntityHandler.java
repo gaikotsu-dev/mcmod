@@ -27,10 +27,10 @@ public class EntityHandler {
                     return new RenderSample(manager, new ModelSample(), 0.3f);
                 }
             });
-            RenderingRegistry.registerEntityRenderingHandler(EntityCat.class, new IRenderFactory<EntityCat>(){
+            RenderingRegistry.registerEntityRenderingHandler(EntityCtnCat.class, new IRenderFactory<EntityCtnCat>(){
                 @Override
-                public Render<? super EntityCat> createRenderFor(RenderManager manager){
-                    return new RenderCat(manager, new ModelCat(), 0.3f);
+                public Render<? super EntityCtnCat> createRenderFor(RenderManager manager){
+                    return new RenderCtnCat(manager, new ModelCtnCat(), 0.3f);
                 }
             });
             RenderingRegistry.registerEntityRenderingHandler(EntityCstmMan2.class, new IRenderFactory<EntityCstmMan2>(){
@@ -69,8 +69,8 @@ public class EntityHandler {
     public static void registerModEntity() {
         EntityRegistry.registerModEntity(new ResourceLocation("sm:sample"), EntitySample.class, "Sample", 0, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntitySample.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:cartooncat"), EntityCat.class, "Cat", 1, Reference.MODID, 50, 1, true, 1001, 23);
-        EntityRegistry.addSpawn(EntityCat.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:cartooncat"), EntityCtnCat.class, "CtnCat", 1, Reference.MODID, 50, 1, true, 1001, 23);
+        EntityRegistry.addSpawn(EntityCtnCat.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:costumeman"), EntityCstmMan2.class, "CstmMan2", 2, Reference.MODID, 50, 1, true, 1002, 24);
         EntityRegistry.addSpawn(EntityCstmMan2.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:slenderman"), EntitySlndrMan.class, "SlndrMan", 3, Reference.MODID, 50, 1, true, 1003, 25);

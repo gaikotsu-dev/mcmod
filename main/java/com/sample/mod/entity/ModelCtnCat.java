@@ -9,7 +9,7 @@ import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.util.math.MathHelper;
 
-public class ModelCat extends ModelBase {
+public class ModelCtnCat extends ModelBase {
 	private final ModelRenderer all;
 	private final ModelRenderer head;
 	private final ModelRenderer body;
@@ -18,7 +18,7 @@ public class ModelCat extends ModelBase {
 	private final ModelRenderer leg1;
 	private final ModelRenderer leg2;
 
-	public ModelCat() {
+	public ModelCtnCat() {
 		textureWidth = 32;
 		textureHeight = 32;
 
