@@ -9,10 +9,10 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class RenderCtnCat extends RenderLiving<EntityLiving>{
-    public static final ResourceLocation texture = new ResourceLocation("sm:textures/entity/ctncat.png");
+public class RenderCtnCat2 extends RenderLiving<EntityLiving>{
+    public static final ResourceLocation texture = new ResourceLocation("sm:textures/entity/ctncat2.png");
 
-    public RenderCtnCat(RenderManager rendermanagerIn, ModelBase modelbaseIn, float shadowsizeIn) {
+    public RenderCtnCat2(RenderManager rendermanagerIn, ModelBase modelbaseIn, float shadowsizeIn) {
         super(rendermanagerIn, modelbaseIn, shadowsizeIn);
     }
 

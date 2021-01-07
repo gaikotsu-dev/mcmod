@@ -1,8 +1,9 @@
 ﻿item.sample_ingot.name=Sample Ingot
 tile.sample_ore.name=Sample Ore
-entity.CtnCat.name=カーツーンキャットt
+entity.CtnCat.name=カーツーンキャット
+entity.CtnCat2.name=カーツーンキャット2
 entity.CstmMan2.name=コステュームマン
 entity.SlndrMan.name=スレンダーマン
 entity.SirenHead.name=サイレンヘッド
-entity.SirenHead2.name=サイレンヘッド２
+entity.SirenHead2.name=サイレンヘッド2
 entity.IronMan.name=アイアンマン

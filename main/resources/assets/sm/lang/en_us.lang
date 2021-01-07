@@ -1,6 +1,7 @@
 ﻿item.sample_ingot.name=Sample Ingot
 tile.sample_ore.name=Sample Ore
 entity.CtnCat.name=Cartoon Cat
+entity.CtnCat2.name=Cartoon Cat2
 entity.CstmMan2.name=Costume Man
 entity.SlndrMan.name=Slender Man
 entity.SirenHead.name=Siren Head
