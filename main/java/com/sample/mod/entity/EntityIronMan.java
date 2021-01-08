@@ -21,6 +21,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.datafix.DataFixer;
@@ -49,6 +50,11 @@ public class EntityIronMan extends EntityIronGolem {
 
         if(!this.getEntityWorld().isAnyPlayerWithinRangeAt(posX, posY, posZ, 5D))
             this.motionY *= 0.6000000238418579D;
+
+        float f12 = 0.0F;
+        float f13 = 1.0F;
+        float f15 = (this.rand.nextFloat() - 0.5F) * 1.0F + 1.0F;
+        this.world.spawnParticle(EnumParticleTypes.EXPLOSION_NORMAL, this.posX + (double)f12, this.posY + (double)f13, this.posZ + (double)f15, 0.0D, 0.0D, 0.0D);
     }
 
     protected void applyEntityAttributes()
