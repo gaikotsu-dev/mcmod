@@ -1,6 +1,7 @@
 ﻿item.sample_ingot.name=Sample Ingot
 item.blaster_sword.name=ブラスターソード
 tile.sample_ore.name=Sample Ore
+tile.sample_ore2.name=Sample Ore2
 entity.Sample.name=ダークナイト
 entity.CtnCat.name=カーツーンキャット
 entity.CtnCat2.name=カーツーンキャット2
@@ -9,3 +10,4 @@ entity.SlndrMan.name=スレンダーマン
 entity.SirenHead.name=サイレンヘッド
 entity.SirenHead2.name=サイレンヘッド2
 entity.IronMan.name=アイアンマン
+entity.LongHorse.name=ロングホース
