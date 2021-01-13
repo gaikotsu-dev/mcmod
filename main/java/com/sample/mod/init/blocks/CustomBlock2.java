@@ -4,8 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class CustomBlock extends Block {
-    public CustomBlock(String name, float hardness, float resistance) {
+public class CustomBlock2 extends Block {
+    public CustomBlock2(String name, float hardness, float resistance) {
         super(Material.ROCK);
         setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
         setUnlocalizedName(name);

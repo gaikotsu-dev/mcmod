@@ -1,7 +1,8 @@
-﻿item.sample_ingot.name=Sample Ingot
+﻿
 item.blaster_sword.name=Blaster Sword
-tile.sample_ore.name=Sample Ore
-tile.sample_ore2.name=Sample Ore2
+item.custom_ingot.name=Custom Ingot
+tile.custom_block.name=Custom Block
+tile.custom_block2.name=Custom Block2
 entity.Sample.name=Dark Knight
 entity.CtnCat.name=Cartoon Cat
 entity.CtnCat2.name=Cartoon Cat2

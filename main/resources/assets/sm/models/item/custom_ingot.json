@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "sm:items/sample_ingot"
+        "layer0": "sm:items/custom_ingot"
     }
 }
