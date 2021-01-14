@@ -6,6 +6,7 @@ tile.custom_block2.name=Custom Block2
 entity.Sample.name=Dark Knight
 entity.CtnCat.name=Cartoon Cat
 entity.CtnCat2.name=Cartoon Cat2
+entity.CtnCat3.name=Cartoon Cat3
 entity.CstmMan2.name=Costume Man
 entity.SlndrMan.name=Slender Man
 entity.SirenHead.name=Siren Head

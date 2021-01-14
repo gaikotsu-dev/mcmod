@@ -6,6 +6,7 @@ tile.custom_block2.name=カスタムブロック2
 entity.Sample.name=ダークナイト
 entity.CtnCat.name=カーツーンキャット
 entity.CtnCat2.name=カーツーンキャット2
+entity.CtnCat3.name=カーツーンキャット3
 entity.CstmMan2.name=コステュームマン
 entity.SlndrMan.name=スレンダーマン
 entity.SirenHead.name=サイレンヘッド
