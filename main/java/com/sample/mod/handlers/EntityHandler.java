@@ -82,6 +82,12 @@ public class EntityHandler {
                     return new RenderCtnDog(manager, new ModelCtnDog(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntityLightHead.class, new IRenderFactory<EntityLightHead>(){
+                @Override
+                public Render<? super EntityLightHead> createRenderFor(RenderManager manager){
+                    return new RenderLightHead(manager, new ModelLightHead(), 0.3f);
+                }
+            });
 
             RenderingRegistry.registerEntityRenderingHandler(EntityIronMan.class, new IRenderFactory<EntityIronMan>(){
                 @Override
@@ -114,6 +120,8 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntityLongHorse.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:cartoondog"), EntityCtnDog.class, "CtnDog", 10, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityCtnDog.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:lighthead"), EntityLightHead.class, "LightHead", 11, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.addSpawn(EntityLightHead.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
