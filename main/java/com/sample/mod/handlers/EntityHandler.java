@@ -63,6 +63,12 @@ public class EntityHandler {
                     return new RenderSirenHead2(manager, new ModelSirenHead2(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntitySirenHead3.class, new IRenderFactory<EntitySirenHead3>(){
+                @Override
+                public Render<? super EntitySirenHead3> createRenderFor(RenderManager manager){
+                    return new RenderSirenHead3(manager, new ModelSirenHead3(), 0.3f);
+                }
+            });
             RenderingRegistry.registerEntityRenderingHandler(EntityLongHorse.class, new IRenderFactory<EntityLongHorse>(){
                 @Override
                 public Render<? super EntityLongHorse> createRenderFor(RenderManager manager){
@@ -93,7 +99,9 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntitySirenHead.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:sirenhead2"), EntitySirenHead2.class, "SirenHead2", 6, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntitySirenHead2.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:longhorse"), EntityLongHorse.class, "LongHorse", 7, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:sirenhead3"), EntitySirenHead3.class, "SirenHead3", 7, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.addSpawn(EntitySirenHead3.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:longhorse"), EntityLongHorse.class, "LongHorse", 8, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityLongHorse.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
