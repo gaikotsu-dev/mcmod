@@ -1,15 +1,11 @@
 package com.sample.mod.entity;
 
-import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EnumCreatureAttribute;
-import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.util.math.MathHelper;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModelSample extends ModelBiped {
 	private final ModelRenderer arm2;
@@ -53,12 +49,26 @@ public class ModelSample extends ModelBiped {
 
 	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		arm2.render(f5);
-		arm1.render(f5);
-		leg1.render(f5);
-		head.render(f5);
-		leg2.render(f5);
-		body.render(f5);
+		if (this.isChild) {
+			GlStateManager.pushMatrix();
+			GlStateManager.scale(0.5F, 0.5F, 0.5F);
+			GlStateManager.translate(0.0F, 30.0F * f5, 0.0F);
+			arm2.render(f5);
+			arm1.render(f5);
+			leg1.render(f5);
+			head.render(f5);
+			leg2.render(f5);
+			body.render(f5);
+			GlStateManager.popMatrix();
+		}
+		else {
+			arm2.render(f5);
+			arm1.render(f5);
+			leg1.render(f5);
+			head.render(f5);
+			leg2.render(f5);
+			body.render(f5);
+		}
 	}
 
 	public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
