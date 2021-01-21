@@ -41,13 +41,14 @@ public class EntityWeiSkeleton extends EntitySkeleton {
         if (itemstack.getItem() == Items.SPECTRAL_ARROW)
         {
             EntitySpectralArrow entityspectralarrow = new EntitySpectralArrow(this.world, this);
+            entityspectralarrow.setFire(1);
             entityspectralarrow.setEnchantmentEffectsFromEntity(this, p_190726_1_);
             return entityspectralarrow;
         }
         else
         {
             EntityArrow entityarrow = super.getArrow(p_190726_1_);
-
+            entityarrow.setFire(1);
             if (itemstack.getItem() == Items.TIPPED_ARROW && entityarrow instanceof EntityTippedArrow)
             {
                 ((EntityTippedArrow)entityarrow).setPotionEffect(itemstack);
