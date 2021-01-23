@@ -94,6 +94,12 @@ public class EntityHandler {
                     return new RenderWeiSkeleton(manager, new ModelWeiSkeleton(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntitySlimeT.class, new IRenderFactory<EntitySlimeT>(){
+                @Override
+                public Render<? super EntitySlimeT> createRenderFor(RenderManager manager){
+                    return new RenderSlimeT(manager, new ModelSlimeT(), 0.3f);
+                }
+            });
 
             RenderingRegistry.registerEntityRenderingHandler(EntityIronMan.class, new IRenderFactory<EntityIronMan>(){
                 @Override
@@ -130,6 +136,8 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntityLightHead.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:weiskeleton"), EntityWeiSkeleton.class, "WeiSkeleton", 12, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityWeiSkeleton.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:slimet"), EntitySlimeT.class, "SlimeT", 13, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.addSpawn(EntitySlimeT.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
