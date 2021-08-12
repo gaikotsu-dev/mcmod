@@ -106,6 +106,12 @@ public class EntityHandler {
                     return new RenderDarkKing(manager, new ModelDarkKing(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntityAlien.class, new IRenderFactory<EntityAlien>(){
+                @Override
+                public Render<? super EntityAlien> createRenderFor(RenderManager manager){
+                    return new RenderAlien(manager, new ModelAlien(), 0.3f);
+                }
+            });
 
             RenderingRegistry.registerEntityRenderingHandler(EntityIronMan.class, new IRenderFactory<EntityIronMan>(){
                 @Override
@@ -146,6 +152,8 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntitySlimeT.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:darkking"), EntityDarkKing.class, "DarkKing", 14, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityDarkKing.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:alien"), EntityAlien.class, "Alien", 15, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.addSpawn(EntityAlien.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
