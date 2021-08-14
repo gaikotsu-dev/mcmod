@@ -148,6 +148,12 @@ public class EntityHandler {
                     return new RenderCtnMouse(manager, new ModelCtnMouse(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntityCtnMouseA.class, new IRenderFactory<EntityCtnMouseA>(){
+                @Override
+                public Render<? super EntityCtnMouseA> createRenderFor(RenderManager manager){
+                    return new RenderCtnMouseA(manager, new ModelCtnMouseA(), 0.3f);
+                }
+            });
 
             RenderingRegistry.registerEntityRenderingHandler(EntityIronMan.class, new IRenderFactory<EntityIronMan>(){
                 @Override
@@ -202,6 +208,8 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntityRedstoneGolem.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:cartoonmouse"), EntityCtnMouse.class, "CtnMouse", 21, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityCtnMouse.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:cartoonmousea"), EntityCtnMouseA.class, "CtnMouseA", 22, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.addSpawn(EntityCtnMouseA.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
     }
