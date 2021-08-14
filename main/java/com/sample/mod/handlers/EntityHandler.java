@@ -76,6 +76,12 @@ public class EntityHandler {
                     return new RenderSirenHead3(manager, new ModelSirenHead3(), 0.3f);
                 }
             });
+            RenderingRegistry.registerEntityRenderingHandler(EntitySirenHeadSin.class, new IRenderFactory<EntitySirenHeadSin>(){
+                @Override
+                public Render<? super EntitySirenHeadSin> createRenderFor(RenderManager manager){
+                    return new RenderSirenHeadSin(manager, new ModelSirenHeadSin(), 0.3f);
+                }
+            });
             RenderingRegistry.registerEntityRenderingHandler(EntityLongHorse.class, new IRenderFactory<EntityLongHorse>(){
                 @Override
                 public Render<? super EntityLongHorse> createRenderFor(RenderManager manager){
@@ -160,23 +166,26 @@ public class EntityHandler {
         EntityRegistry.addSpawn(EntitySirenHead2.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
         EntityRegistry.registerModEntity(new ResourceLocation("sm:sirenhead3"), EntitySirenHead3.class, "SirenHead3", 9, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntitySirenHead3.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:longhorse"), EntityLongHorse.class, "LongHorse", 10, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:sirenheadsin"), EntitySirenHeadSin.class, "SirenHeadSin", 10, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.addSpawn(EntitySirenHeadSin.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:longhorse"), EntityLongHorse.class, "LongHorse", 11, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityLongHorse.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:cartoondog"), EntityCtnDog.class, "CtnDog", 11, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:cartoondog"), EntityCtnDog.class, "CtnDog", 12, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityCtnDog.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:lighthead"), EntityLightHead.class, "LightHead", 13, Reference.MODID, 50, 1, true, 1000, 22);
+
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:lighthead"), EntityLightHead.class, "LightHead", 14, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityLightHead.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:weiskeleton"), EntityWeiSkeleton.class, "WeiSkeleton", 14, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:weiskeleton"), EntityWeiSkeleton.class, "WeiSkeleton", 15, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityWeiSkeleton.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:slimet"), EntitySlimeT.class, "SlimeT", 15, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:slimet"), EntitySlimeT.class, "SlimeT", 16, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntitySlimeT.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:darkking"), EntityDarkKing.class, "DarkKing", 16, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:darkking"), EntityDarkKing.class, "DarkKing", 17, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityDarkKing.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:alien"), EntityAlien.class, "Alien", 17, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:alien"), EntityAlien.class, "Alien", 18, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityAlien.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:endersent"), EntityEnderSent.class, "EnderSent", 18, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:endersent"), EntityEnderSent.class, "EnderSent", 19, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityEnderSent.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
-        EntityRegistry.registerModEntity(new ResourceLocation("sm:redstonegolem"), EntityRedstoneGolem.class, "RedstoneGolem", 19, Reference.MODID, 50, 1, true, 1000, 22);
+        EntityRegistry.registerModEntity(new ResourceLocation("sm:redstonegolem"), EntityRedstoneGolem.class, "RedstoneGolem", 20, Reference.MODID, 50, 1, true, 1000, 22);
         EntityRegistry.addSpawn(EntityRedstoneGolem.class, 50, 6, 12, EnumCreatureType.MONSTER, Biomes.HELL,Biomes.PLAINS,Biomes.DEFAULT);
 
         EntityRegistry.registerModEntity(new ResourceLocation("sm:ironman"), EntityIronMan.class, "IronMan", 100, Reference.MODID, 50, 1, true, 100000, 1000);
